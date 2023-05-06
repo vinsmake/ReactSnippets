@@ -1,7 +1,7 @@
 # ReactSnippets
 My Custom Snippets for react
 
-Vrec :
+VRComponent :
 ```
 export const $1 = () => {
   return (
@@ -9,5 +9,17 @@ export const $1 = () => {
       $0
     </>
   )
+}
+```
+
+VRUseState :
+```
+const [${1}, set${1/(.*)/${1:/capitalize}/} ] = useState($0);
+```
+
+VRArrow :
+```
+const $1 = () => {
+  $0
 }
 ```
