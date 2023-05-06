@@ -16,8 +16,11 @@
 	// 	"description": "Log output to console"
 	// }
 
-	"V react export const": {
-		"prefix": "Vrec",
+
+//React normal use////////////////////////////////////////////////////
+
+	"V React component": {
+		"prefix": "VRComponent",
 		"body": [
 			"export const $1 = () => {",
 			"	return (",
@@ -28,5 +31,23 @@
 			"}"
 			],
 	"description": "Create a basic auto export const component"
+	},
+
+
+	"V React useState": {
+		"prefix": "VRUseState",
+		"body": "const [${1}, set${1/(.*)/${1:/capitalize}/} ] = useState($0);",
+		"description": "Creates a useState hook"
+	},
+
+
+	"V React Arrow": {
+		"prefix": "VRArrow",
+		"body":[
+			"const $1 = () => {",
+			"	$0",
+			"}"
+		],
+		"description": "Normal Arrow Const"
 	}
 }
