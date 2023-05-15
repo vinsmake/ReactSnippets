@@ -22,7 +22,7 @@
 	"V React component": {
 		"prefix": "VRComponent",
 		"body": [
-			"export const $1 = () => {",
+			"export const ${1:${TM_FILENAME_BASE}} = () => {",
 			"	return (",
 			"	  <>"
 			"		  $0",
@@ -34,10 +34,21 @@
 	},
 
 
-	"V React useState": {
-		"prefix": "VRUseState",
-		"body": "const [${1}, set${1/(.*)/${1:/capitalize}/} ] = useState($0);",
-		"description": "Creates a useState hook"
+	"V React Hook Custom": {
+		"prefix": "VRHCustom",
+		"body": [
+			"export const ${1:${TM_FILENAME_BASE}} = () => {",
+			""
+			""
+			"	"
+			""
+			""
+			"	return {",
+			"		$0",
+			"	}",
+			"}"
+			],
+	"description": "Create a basic auto export const component"
 	},
 
 
@@ -49,5 +60,27 @@
 			"}"
 		],
 		"description": "Normal Arrow Const"
-	}
+	},
+
+//HOOKS/////////////////////////////////////
+	"V React Hook useState": {
+		"prefix": "VRHUseState",
+		"body": "const [${1}, set${1/(.*)/${1:/capitalize}/} ] = useState($0);",
+		"description": "Creates a useState hook"
+	},
+
+	"V React Hook useEffect": {
+		"prefix": "VRHUseEffect",
+		"body": [
+		  "useEffect(() => {",
+		  "  ${1:first}",
+		  "",
+		  "  return () => {",
+		  "    ${2:second}",
+		  "  }",
+		  "}, [${3:third}])",
+		  ""
+		],
+		"scope": "typescript,typescriptreact,javascript,javascriptreact"
+	  }
 }
