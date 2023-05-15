@@ -1,5 +1,5 @@
 
-# **My React Hooks**
+# **My React Snippets**
 
 Used and understod by me
 
