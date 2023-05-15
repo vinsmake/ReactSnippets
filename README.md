@@ -1,7 +1,11 @@
-# ReactSnippets
-My Custom Snippets for react
 
-	**"V React component"**: {
+# **My React Hooks**
+
+Used and understod by me
+
+## V React component
+
+	"V React component": {
 		"prefix": "VRComponent",
 		"body": [
 			"export const ${1:${TM_FILENAME_BASE}} = () => {",
@@ -16,7 +20,23 @@ My Custom Snippets for react
 	},
 
 
-	**"V React Hook Custom"**: {
+## V React Arrow
+
+	"V React Arrow": {
+		"prefix": "VRArrow",
+		"body":[
+			"const $1 = () => {",
+			"	$0",
+			"}"
+		],
+		"description": "Normal Arrow Const"
+	},
+
+# **HOOKS**
+
+## V React Hook Custom
+
+	"V React Hook Custom": {
 		"prefix": "VRHCustom",
 		"body": [
 			"export const ${1:${TM_FILENAME_BASE}} = () => {",
@@ -33,25 +53,17 @@ My Custom Snippets for react
 	"description": "Create a basic auto export const component"
 	},
 
+# V React Hook useState
 
-	**"V React Arrow"**: {
-		"prefix": "VRArrow",
-		"body":[
-			"const $1 = () => {",
-			"	$0",
-			"}"
-		],
-		"description": "Normal Arrow Const"
-	},
-
-//HOOKS/////////////////////////////////////
-	**"V React Hook useState"**: {
+	"V React Hook useState": {
 		"prefix": "VRHUseState",
 		"body": "const [${1}, set${1/(.*)/${1:/capitalize}/} ] = useState($0);",
 		"description": "Creates a useState hook"
 	},
 
-	**"V React Hook useEffect"**: {
+# V React Hook useEffect
+
+	"V React Hook useEffect": {
 		"prefix": "VRHUseEffect",
 		"body": [
 		  "useEffect(() => {",
