@@ -24,9 +24,9 @@
 		"body": [
 			"export const ${1:${TM_FILENAME_BASE}} = () => {",
 			"	return (",
-			"	  <>"
-			"		  $0",
-			"	  </>",
+			"	<>"
+			"		$0",
+			"	</>",
 			"	)",
 			"}"
 			],
@@ -131,6 +131,15 @@
 		  "  [${3:second}],",
 		  ")",
 		  ""
+		],
+		"scope": "typescript,typescriptreact,javascript,javascriptreact"
+	  },
+
+
+	  "V React Hook useReducer": {
+		"prefix": "VRHUseReducer",
+		"body": [
+		  "const [state, dispatch] = useReducer$1(${2:Reducer}, ${3:InitialArg}, ${4:InitalizerFunction})"
 		],
 		"scope": "typescript,typescriptreact,javascript,javascriptreact"
 	  },
