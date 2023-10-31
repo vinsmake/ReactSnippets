@@ -1,0 +1,171 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+
+//React normal use////////////////////////////////////////////////////
+
+	"V React component": {
+		"prefix": "VRComponent",
+		"body": [
+			"export const ${1:${TM_FILENAME_BASE}} = () => {",
+			"	return (",
+			"	<>"
+			"		$0",
+			"	</>",
+			"	)",
+			"}"
+			],
+	"description": "Create a basic auto export const component"
+	},
+
+
+	"V React Arrow": {
+		"prefix": "VRArrow",
+		"body":[
+			"const $1 = () => {",
+			"	$0",
+			"}"
+		],
+		"description": "Normal Arrow Const"
+	},
+
+//HOOKS/////////////////////////////////////
+
+	"V React Hook Custom": {
+		"prefix": "VRHCustom",
+		"body": [
+			"export const ${1:${TM_FILENAME_BASE}} = () => {",
+			""
+			""
+			"	"
+			""
+			""
+			"	return {",
+			"		$0",
+			"	}",
+			"}"
+			],
+	"description": "Create a basic auto export const component"
+	},
+
+
+	"V React Hook useState": {
+		"prefix": "VRHUseState",
+		"body": "const [${1}, set${1/(.)/${1:/capitalize}/} ] = useState${2}($0);",
+		"description": "Creates a useState hook",
+	},
+
+	
+	"V React Hook useEffect": {
+		"prefix": "VRHUseEffect",
+		"body": [
+		  "useEffect${1}(() => {",
+		  "  ${2}",
+		  "",
+		  "  return () => {",
+		  "    ${3}",
+		  "  }",
+		  "}, [${4}])",
+		  ""
+		],
+		"scope": "typescript,typescriptreact,javascript,javascriptreact"
+	  },
+
+
+	  "V React Hook useLayoutEffect": {
+		"prefix": "VRHuseLayoutEffect",
+		"body": [
+		  "useLayoutEffect${1}(() => {",
+		  "  ${2}",
+		  "",
+		  "  return () => {",
+		  "    ${3}",
+		  "  }",
+		  "}, [${4}])",
+		  ""
+		],
+		"scope": "typescript,typescriptreact,javascript,javascriptreact"
+	  },
+	  
+
+	  "V React Hook useRef": {
+		"prefix": "VRHUseRef",
+		"body": [
+		  "const ${2:${first}} = useRef$1 (${3:${second}})"
+		],
+		"scope": "typescript,typescriptreact,javascript,javascriptreact"
+	  },
+
+
+	  "V React Hook useMemo": {
+		"prefix": "VRHUseMemo",
+		"body": [
+		  "const memorized${2/(.)/${1:/capitalize}/} = useMemo$1(() => ${3:whatToRenderize}, [${4:whenToRenderize}])"
+		],
+		"scope": "typescript,typescriptreact,javascript,javascriptreact"
+	  },
+
+
+	  "V React Hook useCallback": {
+		"prefix": "VRHUseCallback",
+		"body": [
+		  "useCallback$1(",
+		  "  () => {",
+		  "    ${2:first}",
+		  "  },",
+		  "  [${3:second}],",
+		  ")",
+		  ""
+		],
+		"scope": "typescript,typescriptreact,javascript,javascriptreact"
+	  },
+
+
+	  "V React Hook useReducer": {
+		"prefix": "VRHUseReducer",
+		"body": [
+		  "const [state, dispatch] = useReducer$1(${2:Reducer}, ${3:InitialArg}, ${4:InitalizerFunction})"
+		],
+		"scope": "typescript,typescriptreact,javascript,javascriptreact"
+	  },
+
+	  /* DATA *///////////////////////////////////////////////////////////////////////////
+	"V React Data": {
+		"prefix": "VRData",
+		"body": [
+			"export const ${1:${TM_FILENAME_BASE}} = {",
+			"		$0",
+			"}"
+			],
+	"description": "Create a basic data json"
+	},
+
+	"V React Map": {
+		"prefix": "VRMap",
+		"body": [
+
+			"{"
+			"	${1:WhatToMap}.map(${2:mapped} => ("
+			"		<Component key={${2:mapped}.key} {...${2:mapped}}/>"
+			"	))"
+			"}"
+			],
+	"description": "Create a mapping code"
+	}
+}
+
