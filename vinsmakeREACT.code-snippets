@@ -25,7 +25,7 @@
 			"export const ${1:${TM_FILENAME_BASE}} = () => {",
 			"	return (",
 			"	<>"
-			"		$0",
+			"		<h1>${0:${TM_FILENAME_BASE}}</h1>",
 			"	</>",
 			"	)",
 			"}"
